@@ -1,0 +1,72 @@
+{
+  "name": "Microsoft Agent Framework FDH",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "extensions": [
+    "ms-python.python",
+    "ms-python.black-formatter",
+    "ms-python.flake8",
+    "ms-python.mypy-type-checker",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode.vscode-json",
+    "redhat.vscode-yaml",
+    "ms-toolsai.jupyter",
+    "ms-vscode.vscode-typescript-next"
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "/opt/conda/bin/python",
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "jupyter.askForKernelRestart": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false
+  },
+  "postCreateCommand": "pip install -r requirements.txt && pip install -e .",
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [8000, 8501, 7860, 3000, 5432, 6379, 8080],
+  "portsAttributes": {
+    "8000": {
+      "label": "FastAPI Server",
+      "onAutoForward": "notify"
+    },
+    "8501": {
+      "label": "Streamlit App",
+      "onAutoForward": "notify"
+    },
+    "7860": {
+      "label": "Gradio Interface",
+      "onAutoForward": "notify"
+    },
+    "3000": {
+      "label": "React Dashboard",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "GitHub.copilot"
+      ]
+    }
+  }
+}
