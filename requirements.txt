@@ -1,0 +1,73 @@
+# Microsoft Agent Framework Core Dependencies
+microsoft-agent-framework==1.0.0
+autogen==0.3.2
+openai>=1.0.0
+anthropic>=0.25.0
+
+# DevUI and Visualization
+streamlit>=1.29.0
+dash>=2.17.0
+plotly>=5.18.0
+bokeh>=3.3.0
+gradio>=4.13.0
+
+# OpenTelemetry and Monitoring
+opentelemetry-api>=1.21.0
+opentelemetry-sdk>=1.21.0
+opentelemetry-instrumentation>=0.42b0
+opentelemetry-exporter-otlp>=1.21.0
+opentelemetry-instrumentation-logging>=0.42b0
+opentelemetry-instrumentation-requests>=0.42b0
+opentelemetry-instrumentation-fastapi>=0.42b0
+
+# Enterprise Features
+redis>=5.0.0
+postgresql-psycopg2>=2.9.0
+sqlalchemy>=2.0.0
+alembic>=1.13.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Async and Performance
+asyncio>=3.4.3
+aiohttp>=3.9.0
+aiofiles>=23.2.0
+celery>=5.3.0
+
+# Security and Authentication
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+python-multipart>=0.0.6
+
+# API and Web
+fastapi>=0.105.0
+uvicorn[standard]>=0.24.0
+websockets>=12.0
+
+# Data Processing
+pandas>=2.1.0
+numpy>=1.25.0
+scikit-learn>=1.3.0
+
+# Development and Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+ruff>=0.1.0
+mypy>=1.7.0
+
+# Documentation
+mkdocs>=1.5.0
+mkdocs-material>=9.4.0
+
+# LiteLLM Integration for Cost Optimization
+litellm>=1.23.0
+
+# Archon RAG Integration
+archon-rag-client>=0.1.0
+
+# LançaFácil Integration
+lancafacil-sdk>=0.1.0
+
+# PAI Integration
+pai-sdk>=0.1.0
